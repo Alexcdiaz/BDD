@@ -1,0 +1,14 @@
+{
+  "name": "bdd",
+  "version": "1.0.0",
+  "description": "BDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "author": "Alexander Cifuentes, Daniel García, Miguel Ramirez",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.2.1"
+  }
+}

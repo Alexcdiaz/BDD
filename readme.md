@@ -26,4 +26,5 @@ La aplicación está enfocada a realizar pruebas cuando se soliciten productos d
 - Como máquina quiero determinar si el dinero es suficiente para comprar un producto
 - Como máquina quiero identificar el producto seleccionado por el usuario para verificar si hay stock del mismo
 
-[![CucumberReports: BDD-Vending-Machine](https://messages.cucumber.io/api/report-collections/1f8092e2-9c90-4826-962f-ff13f154c27c/badge)](https://reports.cucumber.io/report-collections/1f8092e2-9c90-4826-962f-ff13f154c27c)
+# Reporte de Cucumber
+[Reportes](https://reports.cucumber.io/reports/9ec0ad9f-40c8-4eb6-ab83-4ea6aadd6944)

@@ -1,23 +1,42 @@
 const assert = require('assert');
 const { Given, When, Then } = require('@cucumber/cucumber');
 
-function esViernes(today) {
-    if (today === "Viernes") {
-        return "TGIF";
+function despachar(cod, price) {
+    if (cod === "A15") {
+        if (price < 40 )
+            return "Dinero incompleto";
+        else
+            return "Bebida azucarada";
+    } else if (cod === "B60") {
+        if (price < 50 )
+            return "Dinero incompleto";
+        else
+            return "Agua";
+    } else if (cod === "C6") {
+        if (price < 80 )
+            return "Dinero incompleto";
+        else
+            return "Papas fritas";
     } else {
-        return "Nope";
+        return "Código incorrecto";
     }
 }
 
-Given('hoy es {string}', function (givenDay) {
-    this.today = givenDay;
-});
-
-When('Pregunto si ya es viernes', function () {
-    this.actualAnswer = esViernes(this.today);
-});
-
-Then('Debería decir {string}', function (expectedAnswer) {
-    // assert.strictEqual(this.actualAnswer, expectedAnswer);
-    console.log(this.today, expectedAnswer)
+Given('Total {string}', function(givenMoney){
+    this.money = givenMoney;
 })
+
+Given('Producto {string}', function (givenCode) {
+    this.cod = givenCode;
+});
+
+When('Pregunta por el producto', function () {
+    this.actualAnswer = despachar(this.cod, this.money);
+});
+
+Then('Despacha {string}', function (expectedAnswer) {
+    assert.strictEqual(this.actualAnswer, expectedAnswer);
+    console.log(this.cod, this.money, this.actualAnswer);
+})
+
+
